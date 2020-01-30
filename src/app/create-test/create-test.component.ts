@@ -52,7 +52,7 @@ export class CreateTestComponent implements OnInit {
      console.log("t object printed ...");
      let res=this.service.InsertTest(tObj,this.user1.id).subscribe((result)=>{
       console.log(result);
-this.router.navigate(["/home/institutePersonDashboard"]);
+this.router.navigate(["/home/designTest"]);
 
      })
        
