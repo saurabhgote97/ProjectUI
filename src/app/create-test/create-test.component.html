@@ -1,0 +1,53 @@
+
+<form #testForm="ngForm" (ngSubmit)="TestSubmit(testForm)">
+    <legend>Create Test</legend>
+
+
+ 
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" name="name" id="name" placeholder="enter name" [(ngModel)]="user.name">
+    </div>
+
+
+
+    <div class="form-group">
+        <label for="assignStatus">Assign_status</label>
+        <select name="assignStatus"  class="form-control"  id="assignStatus" placeholder="enter assign_status" [(ngModel)]="user.assignStatus">
+ 
+            <option value="">--Select--</option>
+        
+            <option value="ASSIGNED">ASSIGNED</option>
+            
+            <option value="NA">NA</option>    
+        
+            </select>  
+     </div>
+
+
+    <div class="form-group">
+        <label for="noOfStudents">NoOfStudents</label>
+        <input type="number" class="form-control" name="noOfStudents" id="noOfStudents" placeholder="enter noOfStudents" [(ngModel)]="user.noOfStudents">
+    </div>
+  
+
+    <div class="form-group">
+        <label for="testDate">Test_date</label>
+        <input type="date" class="form-control" name="testDate" id="testDate" placeholder="enter test_date" [(ngModel)]="user.testDate">
+    </div>
+<!-- 
+    <div class="form-group">
+        <label for="test_time">Test_time</label>
+        <input type="number"  max="24" min="0" name="testTime" id="testTimeHH" [(ngModel)]="user.testTimeHH">:
+    </div> -->
+    
+
+    <!-- <div class="form-group">
+        <label for="test_time">Test_time</label>
+        <input type="number"  max="24" min="0" name="testTime" id="testTimemm" [(ngModel)]="user.testTimemm">:
+    </div> -->
+            
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

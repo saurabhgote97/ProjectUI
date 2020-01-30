@@ -8,41 +8,62 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
+  
   constructor(private service: DataService, 
-              private router: Router) { }
+    private router: Router) { }
 
-  message = "";
-  ngOnInit() {
-  }
+message = "";
+ngOnInit() 
+{
+}
 
-  OnAddCallMe(entireData)
-  {
+OnAddCallMe(entireData)
+{
     let empObj = entireData.form.value;
     console.log(empObj);
 
-    let observableResult=
-        this.service.Insert(empObj);
+    //let role=empObj.get("Name");
+    console.log("role is >>>>>>>"+empObj.profile);
 
-    observableResult.subscribe((result: any)=>{
-      console.log(result);
+    if(empObj.profile=="STUDENT")
+    {
+    console.log("Student navigation  . . . .. ");
 
-      if(result.name == "ValidationError")
-      {
-        this.message = "Data is invalid!";
-      }
-      else{
-        this.message = "Record Added!";
-      }
-      //In case of error print result
-      //console.log(result.name);
-    });
+    this.router.navigate(["/register-student"]);
+    }
+    else if(empObj.profile=="INSTITUTE_PERSON")
+    {
+    console.log("person navigation . . . . . .");
+    //register-ip
+    this.router.navigate(["/register-ip"]);
+    }
+    else
+    {
+    console.log("others . . .. . ");
+    }
 
-  }
-  GoBackHome()
-  {
-    this.router.navigate(['/home']);
-  }
+// let observableResult=
+//     this.service.Insert(empObj);
+
+// observableResult.subscribe((result: any)=>{
+//   console.log(result);
+
+//   if(result.name == "ValidationError")
+//   {
+//     this.message = "Data is invalid!";
+//   }
+//   else{
+//     this.message = "Record Added!";
+//   }
+//   //In case of error print result
+//console.log(result.name);
+// });
+
+}
+GoBackHome()
+{
+this.router.navigate(['/home']);
+}
 
 }
 

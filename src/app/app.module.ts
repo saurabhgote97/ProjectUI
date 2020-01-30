@@ -6,9 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { HttpClientModule } from '@angular/common/http';
-import { EditComponent } from './edit/edit.component';
 import { ContactComponent } from './contact/contact.component';
-import { DeleteComponent } from './delete/delete.component';
 import { RegisterComponent } from './register/register.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { RouterModule } from '@angular/router';
@@ -30,15 +28,22 @@ import { LatestResultComponent } from './latest-result/latest-result.component';
 import { AdminEditProfileComponent } from './admin-edit-profile/admin-edit-profile.component';
 import { AdminChangePasswordComponent } from './admin-change-password/admin-change-password.component';
 import { TakeTestComponent } from './take-test/take-test.component';
+import { RegisterStudentComponent } from './register-student/register-student.component';
+import { RegisterIpComponent } from './register-ip/register-ip.component';
+import { CreateTestComponent } from './create-test/create-test.component';
+import { CreateQuestionComponent } from './create-question/create-question.component';
+import { DesignTestComponent } from './design-test/design-test.component';
+import { AddQuestionToTestComponent } from './add-question-to-test/add-question-to-test.component';
+import { AdminShowTestsComponent } from './admin-show-tests/admin-show-tests.component';
+import { AdminStudentsComponent } from './admin-students/admin-students.component';
+import { AdminIPSComponent } from './admin-ips/admin-ips.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutusComponent,
-    EditComponent,
     ContactComponent,
-    DeleteComponent,
     RegisterComponent,
     NotfoundComponent,
     LoginComponent,
@@ -55,7 +60,16 @@ import { TakeTestComponent } from './take-test/take-test.component';
     StuShowReportComponent,
     LatestResultComponent,
     AdminEditProfileComponent,
-    AdminChangePasswordComponent
+    AdminChangePasswordComponent,
+    RegisterStudentComponent,
+    RegisterIpComponent,
+    CreateTestComponent,
+    CreateQuestionComponent,
+    DesignTestComponent,
+    AddQuestionToTestComponent,
+    AdminShowTestsComponent,
+    AdminStudentsComponent,
+    AdminIPSComponent,
   ],
   imports: [
     FormsModule,
@@ -66,28 +80,35 @@ import { TakeTestComponent } from './take-test/take-test.component';
   // { path: "", component: HomeComponent , canActivate:[AuthService]}, 
    { path: "home", component: HomeComponent  , canActivate:[AuthService]},
      { path: "register", component: RegisterComponent},
-     { path: "edit/:No", component: EditComponent  , canActivate:[AuthService]},
-     { path: "delete/:No", component: DeleteComponent , canActivate:[AuthService] },
      { path: "about", component: AboutusComponent },
      { path: "contact", component: ContactComponent },
      { path: "login", component: LoginComponent },
+     { path: "register-student", component: RegisterStudentComponent },
+     { path: "register-ip", component: RegisterIpComponent },
      { path:'home',component:HomeComponent,children:[ {path: 'studentDashboard',component:StudentDashboardComponent}],canActivate:[AuthService]},
      { path:'home',component:HomeComponent,children:[ {path: 'studentEditProfile',component:StuEditProfileComponent}],canActivate:[AuthService]},
      { path:'home',component:HomeComponent,children:[ {path: 'studentChangePassword',component:StuChangePasswordComponent}],canActivate:[AuthService]},
      { path:'home',component:HomeComponent,children:[ {path: 'studentShowTest',component:ShowTestComponent}],canActivate:[AuthService]},
      { path:'home',component:HomeComponent,children:[ {path: 'studentTakeTest/:No',component:TakeTestComponent}],canActivate:[AuthService]},
      { path:'home',component:HomeComponent,children:[ {path: 'latestResult',component:LatestResultComponent}],canActivate:[AuthService]},
-     //{ path: 'studentTakeTest/:No',component:StudentDashboardComponent},
      { path:'home',component:HomeComponent,children:[ {path: 'studentTakeHistory',component:StuTestHistoryComponent}],canActivate:[AuthService]},
      { path:'home',component:HomeComponent,children:[ {path: 'studentShowReport',component:StuShowReportComponent}],canActivate:[AuthService]},
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
      { path:'home',component:HomeComponent,children:[ {path: 'adminDashboard',component:AdminDashboardComponent}],canActivate:[AuthService]},
      { path:'home',component:HomeComponent,children:[ {path: 'adminChangePassword',component:AdminChangePasswordComponent}],canActivate:[AuthService]},
      { path:'home',component:HomeComponent,children:[ {path: 'adminEditProfile',component:AdminEditProfileComponent}],canActivate:[AuthService]}, 
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     { path:'home',component:HomeComponent,children:[ {path: 'adminShowTest',component:AdminShowTestsComponent}],canActivate:[AuthService]}, 
+     { path:'home',component:HomeComponent,children:[ {path: 'adminShowStudents',component:AdminStudentsComponent}],canActivate:[AuthService]}, 
+     { path:'home',component:HomeComponent,children:[ {path: 'adminShowIPS',component:AdminIPSComponent}],canActivate:[AuthService]}, 
+    
+     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
      { path:'home',component:HomeComponent,children:[ {path: 'instutiteEditProfile',component:InstEditProfileComponent}],canActivate:[AuthService]},
      { path:'home',component:HomeComponent,children:[ {path: 'instutiteChangePassword',component:InstChangePasswordComponent}],canActivate:[AuthService]},
      { path:'home',component:HomeComponent,children:[ {path: 'institutePersonDashboard',component:InstitutePersonDashboardComponent}],canActivate:[AuthService]},
+     { path:'home',component:HomeComponent,children:[ {path: 'designTest',component:DesignTestComponent}],canActivate:[AuthService]},
+     { path:'home',component:HomeComponent,children:[ {path: 'createTest',component:CreateTestComponent}],canActivate:[AuthService]},
+     { path:'home',component:HomeComponent,children:[ {path: 'createQuestion',component:CreateQuestionComponent}],canActivate:[AuthService]},
+     { path:'home',component:HomeComponent,children:[ {path: 'addQuestionToTest/:id',component:AddQuestionToTestComponent}],canActivate:[AuthService]},     
      { path: "**", component: HomeComponent,canActivate:[AuthService] }
     ])
   ],

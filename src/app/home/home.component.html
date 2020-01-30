@@ -90,16 +90,15 @@
 
                         <ul class="navbar navbar-inverse" *ngSwitchCase="'Admin'">
                           <br>
-                            <li><a class="navbar-brand" href="#">Hello Admin</a></li><br>
-                          <hr>
-                            <li><a routerLink="/home/adminEditProfile">Edit Profile</a></li>
-                            <li><a routerLink="/home/adminChangePassword" routerLinkActive="active">Change Password</a></li>
+                            <li><a class="navbar-brand" href="/home/adminDashboard">Hello Admin</a></li><br>
+                            <!-- <li><a routerLink="/home/adminEditProfile">Edit Profile</a></li>
+                            <li><a routerLink="/home/adminChangePassword" routerLinkActive="active">Change Password</a></li> -->
                             <hr>
-                            <li><a routerLink="/home/listofbooks"><b>List all Tests</b></a></li>
-                            <li><a routerLink="/home/registerbylibrarian">Add New Member</a></li>
-                            <li><a routerLink="/home/paymenthistory">Payment History</a></li>
-                            <li><a routerLink="/home/listofuser">List Of All User</a></li>
-      
+                            <li><a routerLink="/home/adminShowTest"><b>List all Tests</b></a></li>
+                            <hr>
+                            <li><a routerLink="/home/adminShowStudents">List All Students</a></li>
+                            <hr>
+                            <li><a routerLink="/home/adminShowIPS">List All InstitutePerson</a></li>
                             <hr>
 <!--                   
                             <li> <form role="search">
@@ -120,13 +119,16 @@
                           <li><a class="navbar-brand" href="/home/studentDashboard">Student Dashboard</a></li><br>
                         <hr>
                             <li><a routerLink="/home/studentEditProfile">Edit Profile</a></li>
-                            <li><a routerLink="/home/studentChangePassword" routerLinkActive="active">Change Password</a></li>
+                            <!-- <li><a routerLink="/home/studentChangePassword" routerLinkActive="active">Change Password</a></li> -->
                             <hr>
                         <li ><a routerLink="/home/studentShowTest">Show Test</a></li>
+                        <br>
+                        <hr>
                         <li><a routerLink="/home/studentTakeHistory">Test History</a></li>
-                        <li><a routerLink="/home/studentShowReport">Show Report</a></li> 
-                        <br>
-                        <br>
+                       
+                        <!-- <li><a routerLink="/home/studentShowReport">Show Report</a></li>  -->
+                       
+                        
                         <br>
                         <br> 
                         <br>
@@ -141,15 +143,17 @@
                        
                       <ul class="navbar navbar-inverse" *ngSwitchCase="'InstitutePerson'">
                           <br>
-                          <li><a class="navbar-brand" href="#">Institute Dashboard</a></li><br>
+                          <li><a class="navbar-brand" href="/home/institutePersonDashboard">Institute Dashboard</a></li><br>
                           <hr>
                           <li><a routerLink="/home/instutiteEditProfile">Edit Profile</a></li>
-                          <li><a routerLink="/home/instutiteChangePassword" routerLinkActive="active">Change Password</a></li>
+                          <!-- <li><a routerLink="/home/instutiteChangePassword" routerLinkActive="active">Change Password</a></li> -->
                           <hr>
-                        <li><a routerLink="/home/listofissuedBook">Show Test History</a></li>
-                        <li><a routerLink="/home/userpaymenthistoty">Design New Test</a></li>
-                        <li><a routerLink="/home/userpaymenthistoty">Add Questions</a></li>
-                        <li><a routerLink="/home/help">help</a></li>
+                         <li><a routerLink="/home/createTest">Create New Test</a></li>
+                          <hr>
+                          <li><a routerLink="/home/createQuestion">Create New Question</a></li>
+                          <hr>
+                          <li><a routerLink="/home/designTest">Design New Test</a></li>
+
               
                         <hr>
                         <!-- <li> <form class="navbar-form navbar-left" role="search">

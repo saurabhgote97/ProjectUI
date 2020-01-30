@@ -15,7 +15,7 @@ export class ShowTestComponent implements OnInit {
     console.log("Inside Student Show test");
     this.student = JSON.parse(window.sessionStorage.getItem("currentUser"));
     console.log("Id is : "+this.student.sid);
-    this.service.GetTestById(this.student.sid).subscribe((data)=>
+    this.service.GetTests().subscribe((data)=>
     {
       this.tests = data;
       console.log(data);

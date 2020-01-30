@@ -3,29 +3,129 @@
 <div class="row">
   <div class="col-md-3"></div>
   <div class="col-md-6">
-    <div class="form-group">
-      <label for="">Name</label>
-      <input [(ngModel)]="name" type="text" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="">Email</label>
-      <input [(ngModel)]="email" type="email" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="">Phone</label>
-      <input [(ngModel)]="phone" type="text" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="">Password</label>
-      <input [(ngModel)]="password" type="password" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="">Role</label>
-      <input [(ngModel)]="role" type="text" class="form-control">
-    </div>
-    <div class="form-group">
-        <button (click)="onSignup()" class="btn btn-success">Update</button>
-        <button (click)="onCancel()" class="btn btn-danger" style="margin-left: 10px;">Cancel</button>
-    </div>
+    
+    <form #stuRegForm="ngForm" (ngSubmit)="UpdateStu(stuRegForm)">
+        <legend>Update Here</legend>
+    
+    
+        
+        <div class="form-group">
+            <label for="sid">Id</label>
+            <input type="number" readonly="true" class="form-control"  name="sid" id="sid" placeholder="enter id" [(ngModel)]="user.sid">
+        </div>
+      
+        
+    
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" value="user.age"  name="age" id="age" placeholder="enter age" [(ngModel)]="user.age">
+        </div>
+      
+    
+        <div class="form-group">
+            <label for="contactNo">contactNo</label>
+            <input type="number" class="form-control" name="contactNo" id="contactNo" placeholder="enter contactNo" [(ngModel)]="user.contactNo">
+        </div>
+    
+    
+       
+        <div class="form-group">
+            <label for="dob">DateOfBirth</label>
+            <input type="date" class="form-control" name="dob" id="dob" placeholder="enter dob" [(ngModel)]="user.dob">
+        </div>
+    
+    
+    
+        <div class="form-group">
+            <label for="edu_type">edu_type</label>
+            <input type="text" class="form-control" name="educationType" id="educationType" placeholder="enter edu_type" [(ngModel)]="user.educationType">
+        </div>
+    
+    
+    
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" name="email" id="email" placeholder="enter email" [(ngModel)]="user.email">
+        </div>
+    
+    
+    
+    
+    
+    
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select name="gender"  class="form-control"  id="gender" placeholder="enter gender" [(ngModel)]="user.gender">
+     
+                <option value="">--Select--</option>
+            
+                <option value="MALE">MALE</option>
+                
+                <option value="FEMALE">FEMALE</option>
+                
+                <option value="OTHER">OTHER</option>
+                
+                </select>  
+         </div>
+    
+    
+    
+    
+    
+    
+         <div class="form-group">
+            <label for="gpa">gpa</label>
+            <input type="number" class="form-control" name="gpa" id="gpa" placeholder="enter gpa" [(ngModel)]="user.gpa">
+        </div>
+      
+    
+         
+    
+    
+    
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="enter password" [(ngModel)]="user.password">
+        </div>
+    
+             
+          
+       
+    
+       
+            
+       
+    
+    
+          
+       
+         
+        <div class="form-group">
+            <label for="stuAddr">stuAddr</label>
+            <input type="text" class="form-control" name="stuAddr" id="stuAddr" placeholder="enter stuAddr" [(ngModel)]="user.stuAddr">
+        </div>
+    
+        <div class="form-group">
+            <label for="stuName">stuName</label>
+            <input type="text" class="form-control" name="stuName" id="stuName" placeholder="enter stuName" [(ngModel)]="user.stuName">
+        </div>
+    
+    
+    
+    
+        <div class="form-group">
+            <label for="year">year</label>
+            <input type="number" class="form-control" name="year" id="year" placeholder="enter year" [(ngModel)]="user.year">
+        </div>
+      
+    
+    
+    
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+    
+
+
+
   </div>
 </div>

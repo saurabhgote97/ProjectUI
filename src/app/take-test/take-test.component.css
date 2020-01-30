@@ -1,0 +1,21 @@
+
+/* Modify the background color */ 
+  
+.navbar-custom { 
+    background-color: lightblue; 
+} 
+/* Modify brand and text color */ 
+  
+.navbar-custom .navbar-brand, 
+.navbar-custom .navbar-text { 
+    color: blue; 
+} 
+#rcorners1 {
+    border-radius: 25px;
+    /* background: #73AD21; */
+    padding: 20px; 
+    width: 1370px;
+    height: 170px;  
+    
+  }
+  

@@ -1,0 +1,36 @@
+<div style="left: 200px">
+    <div  class="navbar-custom2" id="rcorners2" style="text-align: center;align-items: center;align-content: center;">
+            <h2>List Of Institute</h2>
+            
+    </div>
+    </div>
+    <br>
+    <br>
+<div class="table-responsive">
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>user Id</th>
+            <th>Person Name</th>
+            <th>Age</th>
+            <th>Date Of Birth</th>
+            <th>Contact No</th>
+            <th>Email</th>
+            <th>Institute Name</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of institutes">
+            <td>{{user.id}}</td>
+            <td>{{user.personName}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.dob}}</td>
+            <td>{{user.contactNo}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.instituteName}}</td>
+            <td>{{user.stuAddr}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

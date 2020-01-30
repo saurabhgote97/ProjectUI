@@ -14,6 +14,49 @@
                 <th></th>
             </tr>
         </thead> 
+       
+        <tbody *ngFor="let question of questions;index as i" style="text-align: left">
+            <div class="navbar navbar-custom" id="rcorners1">
+                <tr>
+                    <td colspan="2" style="font-size: 30px">Q. {{question.question}}</td>
+                </tr>
+                <tr>
+                    <td style="width: 50% ;font-size: 25px"><input ngModel type="radio" value="op1" name="{{i}}">{{question.op1}}</td>
+                    <td style="width: 50% ;font-size: 25px"><input ngModel type="radio" value="op2" name="{{i}}">{{question.op2}}</td>
+                </tr>
+                <tr>
+                    <td style="width: 50% ;font-size: 25px"><input ngModel type="radio" value="op3" name="{{i}}">{{question.op3}}</td>
+                    <td style="width: 50% ;font-size: 25px"><input ngModel type="radio" value="op4" name="{{i}}">{{question.op4}}</td>
+                </tr>
+                <br>
+            </div>
+        </tbody>
+    </table>
+   
+  
+    <div> 
+      <button type="submit" class="btn btn-primary">Submit Test</button>
+       
+    </div>
+</div>
+</form>
+
+<!-- <h3>Exam Started!!!</h3>
+<p>
+&nbsp;    1.Read All Question Carefully.<br>
+&nbsp;    2.Electronics devices are strictly Prohibited.<br>
+&nbsp;    3.Cheating is unacceptable behaviour for prefessionals and will <br>
+&nbsp;&nbsp;&nbsp;not be Tolerated.
+</p>
+<h2 style="text-align:center;">{{displayTimeElapsed()}}<h2>
+<form #examForm="ngForm" (ngSubmit)="Evaluate(examForm)">
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th></th>
+            </tr>
+        </thead> 
         <tbody *ngFor="let question of questions;index as i">
             <tr>
                 <td colspan="2">{{question.question}}</td>
@@ -33,105 +76,5 @@
        
     </div>
 </div>
-</form>
-<!-- <ul *ngFor="let item of questions; index as i"> 
-    <li>{{i+1}} {{item}}</li>
-  </ul> -->
+</form> -->
 
-<!-- <table class="table table-hover">
-  <thead>
-      <tr>
-          <th></th>
-      </tr>
-  </thead> 
-  <tbody *ngFor="let question of questions;let i=index">
-      <tr>
-          <td colspan="2">{{question.question}}</td>
-      </tr>
-      <tr>
-          <td><input type="radio" name="{{questionNo+1}}" value="{{question.op1}}">{{question.op1}}</td>
-          <td><input type="radio" name="{{questionNo+1}}" value="{{question.op2}}">{{question.op2}}</td>
-      </tr>
-      <tr>
-          <td><input type="radio" name="question3" value="{{question.op3}}">{{question.op3}}</td>
-          <td><input type="radio" name="question4" value="{{question.op4}}">{{question.op4}}</td>
-      </tr>
-  </tbody>
-</table> -->
-
-<!-- 
-<br>
-<br>
-<br>
-<br>
-<button (click)="getQuestion()" class="btn btn-success" style="margin-left: 10px;">Start QUIZ</button>
-<br><br>
-<span>Time Elapsed : {{displayTimeElapsed()}}</span>
-<div class="progress">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
-  aria-valuemin="0" aria-valuemax="100" [style.width.%]="(qnProgress+1)*10">
-    {{(qnProgress+1)*10}}% Complete (success)
-  </div>
-</div>
-<div class="container">
-    <span class="well">{{qnProgress+1}}</span>
-
-  <div class="centerAllign well">
-  <div class="panel panel-primary">
-    <div class="panel-heading">{{data[qnProgress].question}}</div>
-   ---------------------------------------------------------------------- 
-
-    <div class="panel-body">
-        <ul class="collection answer">
-            <ng-container>
-              <li  class="collection-item" (click)="Answer(1)">1.  {{data[qnProgress].op1}}</li><hr>
-              <li  class="collection-item" (click)="Answer(2)">2.  {{data[qnProgress].op2}}</li><hr>
-              <li  class="collection-item" (click)="Answer(3)">3.  {{data[qnProgress].op3}}</li><hr>
-              <li  class="collection-item" (click)="Answer(4)">4.  {{data[qnProgress].op4}}</li><hr>
-              <ul class="pager">
-                <li class="previous"><a href="#">Previous</a></li>
-                <li class="next"><a href="#">Next</a></li>
-              </ul>
-           
-            </ng-container>
-        </ul>
-    </div>
-    <hr>
-  </div>
-  </div>
-
-</div>
-
-
- -->
-<!-- 
-    <h2 style="text-align:center;">{{displayTimeElapsed()}}<h2>
-<form #examForm="ngForm" (ngSubmit)="Evaluate(examForm)">
-<div class="table-responsive">
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th></th>
-            </tr>
-        </thead> 
-        <tbody *ngFor="let question of questions;index as i">
-            <tr>
-                <td colspan="2">{{question.question}}</td>
-            </tr>
-            <tr>
-                <td>{{i}}<input type="button" value="{{question.op1}}" onclick="Answer(i)"></td>
-                <td>{{i}}<input type="button" value="{{question.op2}}" onclick="Answer(i)"></td>
-            </tr>
-            <tr>
-                <td>{{i}}<input type="button" value="{{question.op3}}" onclick="Answer(i)"></td>
-                <td>{{i}}<input type="button" value="{{question.op4}}" onclick="Answer(i)"></td>
-            </tr>
-        </tbody>
-    </table>
-    <div> 
-      <button type="submit" class="btn btn-primary">Submit Test</button>
-       
-    </div>
-</div>
-</form>
- -->

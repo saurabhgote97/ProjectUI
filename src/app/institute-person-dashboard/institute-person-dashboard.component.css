@@ -1,0 +1,19 @@
+
+.navbar-custom2 { 
+    background-color: lightblue; 
+} 
+/* Modify brand and text color */ 
+  
+.navbar-custom2 .navbar-brand, 
+.navbar-custom2 .navbar-text { 
+    color: black; 
+} 
+#rcorners2 {
+    border-radius: 25px;
+    /* background: #73AD21; */
+    padding: 20px; 
+    width: 1370px;
+    height: 90px;  
+    
+  }
+  

@@ -1,0 +1,51 @@
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th style="width: 50px">Que Id</th>
+                <th style="width: 300px">question</th>
+                <th>op1</th>
+                <th>op2</th>
+                <th>op3</th>
+                <th>op4</th>
+                <th>Answer</th>
+                
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let que of tests">
+                <td  style="width: 50px">{{que.id}}</td>
+                <td style="width: 300px">{{que.question}}</td>
+                <td>{{que.op1}}</td>
+                <td>{{que.op2}}</td>
+                <td>{{que.op3}}</td>
+                <td>{{que.op4}}</td>
+                <td>{{que.answer}}</td>
+              
+                
+
+<!-- 
+                <td>{{test.testTime.hour}}:{{test.testTime.minute}}</td>
+                <td>{{test.institutePerson.instituteName}}</td>
+                <td>{{test.completionStatus}}</td> -->
+                <!-- <td><a href="/home/studentTakeTest/{{test.id}}"><span class="glyphicon glyphicon-file"></span>
+                      Start Test</a>
+                </td> -->
+                <td style="width: 70%;align-items: center">
+
+                        <button type="button" class="btn btn-info" (click)="AddQue(this.que.id)">Add</button>
+                    </td>
+            
+
+
+            </tr>
+        </tbody>
+        <td style="width: 70%;align-items: center" colspan="7">
+
+            <button type="button" class="btn btn-info" (click)="Nav()">Done</button>
+        </td>
+    </table>
+</div>

@@ -1,1 +1,34 @@
-<p>stu-test-history works!</p>
+<br>
+<br>
+<br>
+<br>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>History Id</th>
+                <th>No of Questions</th>
+                <th>Answered Questions</th>
+                <th>Attempted Questions</th>
+                <th>Marks</th>
+                <th>Percentage</th>
+                <th>Remark</th>
+                <th>Test Id</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let test of testHistorys">
+                <td>{{test.id}}</td>
+                <td>{{test.noOfQuestions}}</td>
+                <td>{{test.noOfAnsweredQuestion}}</td>
+                <td>{{test.noOfAttemptedQuestions}}</td>
+                <td>{{test.marksObtained}}</td>
+                <td>{{test.percentage}}</td>
+                <td>{{test.remark}}</td>
+                <td>{{test.tid}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

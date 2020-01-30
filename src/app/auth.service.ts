@@ -11,7 +11,7 @@ export class AuthService  implements CanActivate
   user:any;
   credentialsDetails:any;
   role:any;
-  baseUrl = "http://localhost:8080/AOnlineExaminationSystemProject/";
+  baseUrl = "http://localhost:7070/AOnlineExaminationSystemProject/";
   constructor(private router:Router,private service:DataService,private helper:HttpClient) {
     this.credentialsDetails ={
       "email":"AS",
@@ -84,11 +84,11 @@ export class AuthService  implements CanActivate
         this.user = result;
       })
     }*/
-    if(credentials.role == "Student")
-      {
-        window.localStorage.setItem("role","Student");
-      //this.service.StudentLogin(this.credentialsDetails).subscribe((data)=>{
-      this.user = this.StudentLogin(this.credentialsDetails);
+    if(credentials.role == "InstitutePerson")
+    {
+        window.localStorage.setItem("role","InstitutePerson");
+        this.user =this.InstutitePersonLogin(this.credentialsDetails);
+         
     }
     else if(credentials.role == "Admin")
     {
@@ -97,8 +97,9 @@ export class AuthService  implements CanActivate
     }
     else
     {
-      window.localStorage.setItem("role","InstitutePerson");
-      this.user =this.InstutitePersonLogin(this.credentialsDetails);
+      window.localStorage.setItem("role","Student");
+      //this.service.StudentLogin(this.credentialsDetails).subscribe((data)=>{
+      this.user = this.StudentLogin(this.credentialsDetails);
     }
     
     this.user.subscribe((data)=>{
